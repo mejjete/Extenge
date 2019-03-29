@@ -17,8 +17,8 @@ void free_list(struct film *head, struct film *current);
 char *s_gets(char *st, int n);
 int main (int argc, char *argv[])
 {   
-    struct film *head = NULL; // Указатель на первый елемент структуры
-    struct film *prev, *current; // prev - указатель на структуру выделенную в прошлый раз
+    struct film *head = NULL;       // Указатель на первый елемент структуры
+    struct film *prev, *current;    // prev - указатель на структуру выделенную в прошлый раз
     char input[TSIZE];
 
     //Cбор и сохранение информации
