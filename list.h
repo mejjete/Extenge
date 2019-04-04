@@ -11,7 +11,7 @@ struct film
 typedef struct film Item;
 typedef struct node
 {
-    Item items;
+    Item item;
     struct node *next;
 } Node;
 typedef Node *List;
