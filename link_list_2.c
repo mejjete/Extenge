@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "list.h"
 
 void showmovies(Item item);
@@ -25,7 +26,7 @@ int main(void)
             continue;
         if(AddItems(temp, &movies) == false)
         {
-            fprintf(stderr, "Problem Allocaltion Memory\n");
+            fprintf(stderr, "Problem Allocaltion Memory!\n");
             break;
         }
         if(ListIsFull(&movies))

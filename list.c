@@ -4,7 +4,7 @@
 
 static void CopyToNode(Item item, Node *pnode);
 
-void Initialize(List *pList)
+void InitializeList(List *pList)
 {
     *pList = NULL;
 }
@@ -42,10 +42,10 @@ unsigned ListItemsCount(const List *pList)
     return count;
 }
 
-bool AddItem(Item item, List *pList)
+bool AddItems(Item item, List *pList)
 {
-    List *pnew;
-    List *scan = *pList;
+    Node *pnew;
+    Node *scan = *pList;
     pnew = (Node*) malloc(sizeof(Node));
     if(pnew == NULL)
         return false;
@@ -61,7 +61,7 @@ bool AddItem(Item item, List *pList)
     }
 }
 
-void Traverse(const List *pList, void(*pfun)(Item item))
+void Travers(const List *pList, void(*pfun)(Item item))
 {
     Node *pnode = *pList;
     while(pnode != NULL)
